@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --theam-color: #feb000;
+    --text-grey: #191818;
+}
+
+.theam-color {
+    color: var(--theam-color);
+}
+
+.py {
+    padding: 100px 0;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+a i {
+    font-size: 18px;
+}
+
+i {
+    font-size: 50px;
+}
+
+/* header */
+.navbar .nav-link{
+    color: black !important;
+}
+.navbar-brand{
+    width: 130px;
+}
+
+/* banner */
+.banner {
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* services */
+.round {
+    border: 40px solid rgba(211, 211, 211, 0.288);
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+}
+
+/* project */
+.pro-icon1,
+.pro-icon2,
+.pro-icon3,
+.pro-icon4 {
+    font-size: 50px;
+}
+
+.pro-item::before {
+    content: '';
+    position: absolute;
+    background-color: #feb000;
+    opacity: 0.1;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s linear;
+}
+
+.pro-item:hover::before {
+    height: 100%;
+}
+
+.pro-contect .round {
+    border: 40px solid rgba(211, 211, 211, 0.306);
+}
+
+/* portfolio */
+.frame {
+    perspective: 500px;
+}
+
+.frame .details {
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%) rotateY(90deg);
+    background: rgba(255, 255, 255, 0.947);
+    opacity: 0;
+    transition: all 0.4s ease-in;
+}
+
+.frame:hover .details {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: 1;
+}
+
+/* services */
+.services::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/rotet.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.w-4:first-child .services-content {
+    border: none;
+}
+
+.icon2 i {
+    color: white;
+    transition: all 0.5s linear;
+    transform: rotateY(180deg);
+}
+
+.services-item i {
+    font-size: 15px;
+}
+
+.services-content:hover .icon2 i {
+    transform: rotatey(-180deg);
+    color: rgb(237, 165, 56);
+}
+
+/* logo */
+.about-logo img {
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.about-logo img:hover {
+    opacity: 1;
+}
+
+/* review */
+.review {
+    background-image: url(../images/com.jpg);
+    background-size: cover;
+}
+
+.carousel-indicators {
+    bottom: -40px;
+}
+
+/* blog */
+.blog-item img {
+    transition: all 0.5s ease-out;
+}
+
+.blog-item img:hover {
+    transform: scale(1.1);
+}
+
+/* fotter */
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: black;
+    margin-right: 10px;
+    transition: all 0.5s linear;
+}
+
+.footer-icon:hover {
+    background-color: var(--theam-color);
+}
+
+.footer-content i {
+    font-size: 18px;
+}
+
+.line {
+    width: 100px;
+    height: 5px;
+    background-color: var(--theam-color);
+    border-radius: 5px;
+    position: relative;
+    top: -35px;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 12px;
+    border-radius: 5px;
+    height: 5px;
+    background-color: black;
+    transition: all 0.5s linear;
+}
+
+.footer-item:hover .line::before {
+    transform: translateX(60px);
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+.col2{
+    width: 20%;
+}
+
+@media (max-width: 1400px) {}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {
+    .border-none-md{
+        border: none !important;
+    }
+    .services-content {
+        text-align: center;
+    }
+    .portfolio ul li a{
+        margin-left: 0 !important;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .project .pro-item{
+        margin: 30px 0 0 0 !important;
+    }
+    .col2{
+        width: 33%;
+        padding: 20px 0;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .border-none-sm{
+        border: none !important;
+    }
+    .col2{
+        width: 50%;
+    }
+}
